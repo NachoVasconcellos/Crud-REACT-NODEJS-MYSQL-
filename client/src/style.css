@@ -1,0 +1,134 @@
+:root {
+  --main-font: "Inter", sans-serif;
+  --main-bg-color: #918989;
+  --button-border-radius: 10px;
+  --button-padding: 10px 20px;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  background-color: rgb(61, 58, 58);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.App {
+  height: 100%;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.books {
+  display: flex;
+  gap: 10px;
+}
+
+.book {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--button-border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  background-color: rgb(17, 115, 145);
+  border: none;
+  border-radius: var(--button-border-radius);
+}
+
+.delete,
+.update,
+.addNew {
+  border: none;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  color: white;
+}
+
+.delete {
+  background-color: #c00a0a;
+}
+
+.update {
+  background-color: #0a53c0;
+}
+
+.addNew {
+  background-color: #0ac07a;
+  margin: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: var(--button-border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: var(--button-border-radius);
+}
+
+.formButton {
+  border: none;
+  padding: var(--button-padding);
+  background-color: rgb(236, 81, 42);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--button-border-radius);
+}
+
+@media (max-width: 768px) {
+  /* Estilos específicos para pantallas más pequeñas (tablets y dispositivos móviles) */
+  .App {
+    padding: 0 10px;
+  }
+
+  .books {
+    flex-direction: column; /* Cambiar a dirección vertical */
+    align-items: center; /* Centrar los elementos verticalmente */
+  }
+
+  .book {
+    width: 100%; /* Ocupar el ancho completo */
+    max-width: none; /* Ancho máximo eliminado */
+  }
+
+  img {
+    width: 100%; /* Ocupar el ancho completo */
+    max-height: none; /* Altura máxima eliminada */
+  }
+}
